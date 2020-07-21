@@ -18,6 +18,7 @@ pushd "$framework_dir" > /dev/null
 
 rm -rf "$xcframework_path"
 
+echo "Extracting slices..."
 mkdir -p variants/iphoneos
 cp -R iOS/ComScore.framework variants/iphoneos
 lipo -remove i386 -remove x86_64 -output variants/iphoneos/ComScore.framework/ComScore variants/iphoneos/ComScore.framework/ComScore
@@ -42,6 +43,7 @@ mkdir -p variants/watchsimulator
 cp -R watchOS/ComScore.framework variants/watchsimulator
 lipo -remove armv7k -remove arm64_32 -output variants/watchsimulator/ComScore.framework/ComScore variants/watchsimulator/ComScore.framework/ComScore
 
+echo "Packaging XCFramework..."
 xcodebuild -create-xcframework \
     -framework variants/iphoneos/ComScore.framework \
     -framework variants/iphonesimulator/ComScore.framework \
