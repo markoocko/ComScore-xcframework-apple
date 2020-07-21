@@ -19,7 +19,7 @@ To build the XCFramework:
 2. Switch to the tag you want to produce an XCFramework for: `$ git switch --detach <tag>`
 3. Use the script to package the framework, providing the checked out repository path as parameter: `$ ./comscore_xcframework.sh /path/to/repository`
 
-If everything goes well a zip of the XCFramework will be generated where the script was executed, with the corresponding checksum displayed. Save the checksum somewhere.
+If everything goes well a zip of the XCFramework will be generated where the script was executed, with the corresponding checksum displayed. **Save the binary zip and the checksum somewhere safe.**
 
 ### Make the XCFramework available
 
