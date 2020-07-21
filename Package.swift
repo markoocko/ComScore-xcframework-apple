@@ -17,7 +17,6 @@ let package = Package(
     products: [
         .library(
             name: "ComScore",
-            type: .dynamic,
             targets: ["ComScore"]
         ),
     ],
