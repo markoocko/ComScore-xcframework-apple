@@ -37,7 +37,7 @@ lipo -remove arm64 -output variants/appletvsimulator/ComScore.framework/ComScore
 
 mkdir -p variants/watchos
 cp -R watchOS/ComScore.framework variants/watchos
-lipo -remove i386 -output variants/watchos/ComScore.framework/ComScore variants/watchos/ComScore.framework/ComScore
+lipo -remove i386 -remove x86_64 -output variants/watchos/ComScore.framework/ComScore variants/watchos/ComScore.framework/ComScore
 
 mkdir -p variants/watchsimulator
 cp -R watchOS/ComScore.framework variants/watchsimulator
